@@ -1,4 +1,4 @@
-<title>Project: API </title>
+# Project: API
 
 
 <div class="panel panel-default" id="project-description">
