@@ -14,7 +14,7 @@ if __name__ == "__main__":
         url_users = "https://jsonplaceholder.typicode.com/users/{}"
         url_todos = "https://jsonplaceholder.typicode.com/todos?userId={}"
         url = requests.get(url_users.format(argv[1]))
-        data_name = url.json().get('name')
+        data_name = url.json().get('username')
         url = requests.get(url_todos.format(argv[1]))
         data = url.json()
         with open("{}.csv".format(argv[1]), mode="w") as file_csv:

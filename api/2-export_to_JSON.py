@@ -24,7 +24,8 @@ if __name__ == "__main__":
             user_id = user["id"]
             username = user["username"]
 
-            todos_response = requests.get(todos_url, params={"userId": user_id})
+            todos_response = requests.get(todos_url,
+                                          params={"userId": user_id})
             todos_response.raise_for_status()
             todos_data = todos_response.json()
 
