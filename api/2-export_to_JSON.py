@@ -4,11 +4,9 @@ import json
 import requests
 import sys
 
+
 def export_user_to_json():
     """export user id data to json format"""
-    if len(sys.argv) != 3:
-        print("Usage: {} <USER_ID>".format(sys.argv[0]))
-        sys.exit(1)
 
     USER_ID = sys.argv[1]
 
@@ -40,10 +38,6 @@ def export_user_to_json():
         f"{USER_ID}": json_list
     }
 
-    json_object = json.dumps(json_dict)
-
-    with open('{}.json'.format(USER_ID), 'w') as f:
-        f.write(json_object)
 
 if __name__ == "__main__":
     export_user_to_json()
